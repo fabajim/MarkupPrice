@@ -9,7 +9,7 @@ class Busca_Precios:
         self.comments = []
 
         # load comments from txt file and append to comments[]
-        with open('COMMENTS.txt', 'a+') as filehandle:
+        with open('PriceMarkupSpanish/COMMENTS.txt', 'a+') as filehandle:
             for line in filehandle:
                 # keeps from '\n' added to list
                 currentComment = line[:-1]
@@ -73,7 +73,7 @@ class Busca_Precios:
         self.save_comments()
 
     def save_comments(self):
-        with open('COMMENTS.txt', 'w') as filehandle:
+        with open('PriceMarkupSpanish/COMMENTS.txt', 'w') as filehandle:
             for listitem in self.comments:
                 filehandle.write('%s\n' % listitem)
 
